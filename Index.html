@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mensaje</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }.container {
+  text-align: center;
+}
+
+button {
+  padding: 20px 40px;
+  font-size: 28px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: #f0f0f0;
+}
+
+.mensaje {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  display: none;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+  </style>
+</head>
+<body><div class="container">
+  <button id="boton">Apretá aquí</button>  <div id="mensaje" class="mensaje">
+    GRACIAS Jhisel 🫂<br><br>
+    Toma una rosa para ti 🌹
+  </div>
+</div><script>
+  const boton = document.getElementById('boton');
+  const mensaje = document.getElementById('mensaje');
+
+  boton.addEventListener('click', () => {
+    boton.style.display = 'none';
+    mensaje.style.display = 'block';
+  });
+</script></body>
+</html>
